@@ -2,7 +2,7 @@ import React from 'react';
 // import userData from '../../data/userData'
 // console.log('userData: ', userData);
 
-const User = (props) => <li>{props.user.name}</li>
+const User = (props) => <li>{props.user.name.first} {props.user.name.last}</li>
 
 const ListOfUsers = (props) => {
   const { userData } = props
@@ -11,8 +11,8 @@ const ListOfUsers = (props) => {
     <ul id="users">
       {
         userData.map(user => {
-          console.log('mapping users: ', user.name);
-          return <User key={user.id} user={user} />
+          console.log('mapping users: ', user);
+          return <User key={user.id.value} user={user} />
         })
       }
     </ul>

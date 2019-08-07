@@ -23,9 +23,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    // fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://randomuser.me/api/?results=10')
     .then(response => response.json())
-    .then(data => this.setState({ userData: data }));
+    .then(data => this.setState({ userData: data.results }))
+    .catch(error => this.setState({ error, isLoading: false }))
   }
 
   render() {
