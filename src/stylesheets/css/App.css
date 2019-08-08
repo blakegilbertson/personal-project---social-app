@@ -1,0 +1,14 @@
+.social-app {
+  background: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.social-app a {
+  color: #FFF;
+}
+
+/*# sourceMappingURL=App.css.map */
