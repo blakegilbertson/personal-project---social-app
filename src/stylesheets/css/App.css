@@ -10,5 +10,10 @@
 .social-app a {
   color: #FFF;
 }
+.social-app .post {
+  border: 1px solid #FFF;
+  padding: 10px;
+  margin: 20px;
+}
 
 /*# sourceMappingURL=App.css.map */
