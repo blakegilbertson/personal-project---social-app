@@ -3,9 +3,21 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.social-app .site-header h1 {
+  text-align: center;
+}
+.social-app .site-header .primary-nav {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-self: center;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
 }
 .social-app a {
   color: #FFF;
@@ -14,6 +26,41 @@
   border: 1px solid #FFF;
   padding: 10px;
   margin: 20px;
+}
+.social-app .post .post-details {
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.social-app .post .post-details .posted-on {
+  float: right;
+}
+.social-app .post .post-content h2 {
+  font-size: 14px;
+  margin: 0;
+}
+.social-app .post .post-interactions {
+  align-items: flex-start;
+  display: flex;
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+.social-app .post .post-interactions .num-likes {
+  margin-right: 15px;
+}
+.social-app .post .post-btns button {
+  margin-right: 10px;
+}
+.social-app .post .post-comments {
+  margin-top: 10px;
+}
+.social-app .post .post-comments .comment {
+  font-size: 10px;
+  margin: 10px;
+}
+.social-app .post .post-comments .comment .comment-likes {
+  float: right;
 }
 
 /*# sourceMappingURL=App.css.map */

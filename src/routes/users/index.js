@@ -3,6 +3,7 @@ import React from 'react';
 const User = (props) => {
   console.log('User props: ', props);
   const user = props.user
+  
   return (
     <li>
       <span className="">

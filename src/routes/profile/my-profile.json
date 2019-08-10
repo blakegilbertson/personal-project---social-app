@@ -1,0 +1,52 @@
+{
+  "cell": "0748-013-206",
+  "dob": {
+    "age": 51,
+    "date": "1968-06-05T12:33:22Z"
+  },
+  "email": "arnold.berry@example.com",
+  "gender": "male",
+  "id": {
+    "name": "NINO",
+    "value": "666"
+  },
+  "location": {
+    "city": "truro",
+    "coordinates": {
+      "latitude": "-3.4638",
+      "longitude": "171.3558"
+    },
+    "postcode": "Y59 2SU",
+    "state": "rutland",
+    "street": "5786 park lane",
+    "timezone": {
+      "offset": "-3:00",
+      "description": "Brazil, Buenos Aires, Georgetown"
+    }
+  },
+  "login": {
+    "md5": "39c1fad283a0159fbda3b2d252e49b3f",
+    "password": "golfball",
+    "salt": "ZlcS4UhP",
+    "sha1": "d4b6551929f857b6dec87f21111df93d9b6da90d",
+    "sha256": "55644b14cb2d93819198e8ffe9e680a6ea78f933c473f37eeda46ff6e2134212",
+    "username": "brownladybug951",
+    "uuid": "458899a9-cf2b-4817-9a6f-396a73a7366a"
+  },
+  "name": {
+    "first": "arnold",
+    "last": "berry",
+    "title": "mr"
+  },
+  "nat": "GB",
+  "phone": "017683 53657",
+  "picture": {
+  "large": "https://randomuser.me/api/portraits/men/89.jpg",
+  "medium": "https://randomuser.me/api/portraits/med/men/89.jpg",
+  "thumbnail": "https://randomuser.me/api/portraits/thumb/men/89.jpg"
+  },
+  "registered": {
+    "age": 13,
+    "date": "2006-01-17T13:07:06Z"
+  }
+}

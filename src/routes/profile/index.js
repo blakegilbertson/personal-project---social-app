@@ -1,6 +1,7 @@
 import React from 'react';
 // import userData from '../../data/userData'
 // console.log('userData: ', userData);
+import myData from './my-profile.json'
 
 const UserImage = (props) => {
   const { imgUrl } = props
@@ -19,8 +20,10 @@ const LoadingUsers = () => {
   )
 }
 
-const ProfileRoute = (props) => {
-  const { userData } = props
+const ProfileRoute = () => {
+  // const { userData } = props
+
+  const userData = myData
 
   console.log('ProfileRoute userData: ', userData);
 

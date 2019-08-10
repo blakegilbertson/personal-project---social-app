@@ -6,7 +6,7 @@ import UserRoutes from './users';
 import ProfileRoutes from './profile';
 
 const Router = (props) => {
-  const { userData } = props
+  const { userData, postData } = props
   const userId = '666'
 
   // TODO update state to a single user ratehr than hacking like this
@@ -27,7 +27,7 @@ const Router = (props) => {
     <BrowserRouter>
       <div className="page-content">
         <Route exact={true} path='/' render={() => (
-          <HomepageRoutes />
+          <HomepageRoutes postData={postData} handleLikeClick={props.handleLikeClick} handleCommentClick={props.handleCommentClick} />
         )}/>
         <Route exact={true} path='/users' render={() => (
           userData &&
