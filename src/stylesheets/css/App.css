@@ -36,9 +36,15 @@
 .social-app .post .post-details .posted-on {
   float: right;
 }
+.social-app .post .post-content .post-img {
+  width: 100%;
+}
 .social-app .post .post-content h2 {
   font-size: 14px;
   margin: 0;
+}
+.social-app .post .post-content .post-body {
+  margin: 10px 0;
 }
 .social-app .post .post-interactions {
   align-items: flex-start;
@@ -52,12 +58,21 @@
 .social-app .post .post-btns button {
   margin-right: 10px;
 }
+.social-app .post .write-comment textarea {
+  width: 98%;
+}
 .social-app .post .post-comments {
   margin-top: 10px;
 }
 .social-app .post .post-comments .comment {
   font-size: 10px;
   margin: 10px;
+}
+.social-app .post .post-comments .comment .users-name {
+  margin-right: 10px;
+}
+.social-app .post .post-comments .comment .posted-on {
+  margin-left: 10px;
 }
 .social-app .post .post-comments .comment .comment-likes {
   float: right;

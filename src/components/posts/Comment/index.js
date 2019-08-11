@@ -1,14 +1,16 @@
 import React from 'react'
-import UserName from '../../global/UserName'
+import UserName from '../../user/UserName'
+import DatePosted from '../DatePosted'
 
 const Comment = (props) => {
-  const { user, likes, comment } = props.comment
+  const { user, likes, comment, datePosted } = props.comment
   return (
     <div className="comment">
       <UserName name={user} />
+      |
+      <DatePosted date={datePosted} />
       <span className="comment-likes">{likes} likes</span>
       <div className="comment-body">{comment}</div>
-      
     </div>
   )
 }

@@ -3,16 +3,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 
   .site-header {
-
-    h1 {
-      text-align: center;
-    }
+    h1 {text-align: center;}
 
     .primary-nav {
       display: flex;
@@ -26,9 +21,7 @@
     }
   }
 
-  a {
-    color: #FFF;
-  }
+  a {color: #FFF;}
 
   .post {
     border: 1px solid #FFF;
@@ -47,10 +40,16 @@
     }
 
     .post-content {
+      .post-img {
+        width: 100%;
+      }
+
       h2 {
         font-size: 14px;
         margin: 0;
       }
+
+      .post-body {margin: 10px 0;}
     }
 
     .post-interactions {
@@ -68,12 +67,20 @@
       button {margin-right: 10px}
     }
 
+    .write-comment {
+      textarea {width: 98%;}
+    }
+
     .post-comments {
       margin-top: 10px;
 
       .comment {
         font-size: 10px;
         margin: 10px;
+
+        .users-name {margin-right: 10px}
+
+        .posted-on {margin-left: 10px}
 
         .comment-likes {float: right;}
       }

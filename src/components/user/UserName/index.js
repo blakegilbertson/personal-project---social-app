@@ -2,7 +2,7 @@ import React from 'react'
 
 const UserName = (props) => {
   return (
-    <span className="users-name">{props.name}</span>
+    <a href="/profile?" className="users-name">{props.name}</a>
   )
 }
 

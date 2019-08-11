@@ -1,58 +1,94 @@
 import React from 'react'
 import Header from '../../global/Heading'
-import UserName from '../../global/UserName'
+import UserName from '../../user/UserName'
+import DatePosted from '../DatePosted'
 import Comment from '../Comment'
 
 const Post = (props) => {
-  const { post } = props
+  const {
+    i,
+    post,
+    handleLikeClick,
+    handleOpenCommentClick,
+    handleAddCommentClick,
+    handleSeeCommentsClick
+  } = props
 
-  const user = post.user
-  const interactions = post.interactions
-  const liked = interactions.liked
-  const comments = interactions.comments.content
+  const {
+    postId,
+    user,
+    date,
+    heading,
+    body,
+    img,
+    interactions
+  } = post
+
+
+  const {
+    likes,
+    liked,
+  } = interactions
+
+  const commentsObj = interactions.comments
+  const numComments = commentsObj.total
+  const comments = commentsObj.content
+  const displayComments = commentsObj.displayComments
+  const displayAddComment = commentsObj.displayAddComment
 
   return (
-    <div className="post">
+    <div className="post" data-postid={postId}>
       <div className="post-details">
         <UserName name={user} />
-        <span className="posted-on">Saturday 28th @ 5pm</span>
+        <DatePosted date={date} />
       </div>
 
       <div className="post-content">
-        <Header type="2" text={post.heading} />
-        <p>{post.body}</p>
+        {img && <img className="post-img" src={img} alt="some pic" />}
+        <Header type="2" text={heading} />
+        <div className="post-body">{body}</div>
       </div>
 
       <div className="post-interactions">
-        {/* TODO: make this clickable to like/dislike */ }
         <div className="num-likes">
-          {interactions.likes} likes
+          {likes} likes
         </div>
-        {/* TODO: make this clickable to show comments */ }
-        <div className="num-comments"> 
-          {interactions.comments.total} comments
-        </div>
-      </div>
-
-      {/* TODO: get like/comment func to update state */}
-      <div className="post-btns">
-        <button onClick={props.handleLikeClick}>
+        <div className="num-comments">
           {
-            liked ? 'Liked' : 'Like'
+            numComments > 0 ?
+              <a href="/" onClick={handleSeeCommentsClick} id={i}>{numComments} comments</a> :
+              <span>{numComments} comments</span>
           }
-        </button>
-        {/* TODO: make this clickable comment */ }
-        <button onClick={props.handleCommentClick}>Comment</button>
+        </div>
       </div>
 
-      <div className="post-comments">
-        {
-          comments &&
-          comments.map(comment => {
-            return <Comment key={comment.id} comment={comment} />
-          })
-        }
+      <div className="post-btns">
+        <button onClick={handleLikeClick} id={i}>
+          {liked ? 'Liked' : 'Like'}
+        </button>
+        {/* TODO: make this clickable to comment */}
+        <button className="comment" onClick={handleOpenCommentClick} id={i}>Comment</button>
       </div>
+
+      {
+        displayAddComment &&
+        <div className="write-comment">
+          <textarea type="text" />
+          <button className="post-comment" onClick={handleAddCommentClick} id={i}>Post</button>
+        </div>        
+      }
+
+      {
+        comments &&
+        displayComments &&
+        <div className="post-comments">
+          {
+            comments.map(comment => {
+              return <Comment key={comment.id} comment={comment} />
+            })
+          }
+        </div>
+      }
     </div>
   )
 }

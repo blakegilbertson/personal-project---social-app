@@ -5,22 +5,25 @@ import Post from '../../components/posts/Post'
 
 const HomepageRoute = (props) => {
   const { postData } = props
-  console.log('HomepageRoute postData: ', postData);
 
   return (
     <div className="homepage-route">
       <section className="posts">
 
         {
-          postData.map(post => {
-            // console.log('mapping users: ', user);
-            return <Post key={post.id} post={post} handleLikeClick={props.handleLikeClick} handleCommentClick={props.handleCommentClick} />
+          postData &&
+          postData.map((post, i) => {
+            return <Post
+              i={i}
+              key={post.postId}
+              post={post}
+              handleLikeClick={props.handleLikeClick}
+              handleOpenCommentClick={props.handleOpenCommentClick}
+              handleAddCommentClick={props.handleAddCommentClick}
+              handleSeeCommentsClick={props.handleSeeCommentsClick}
+            />
           })
         }
-
-        {/* <Post post={post} user="Dave Williams" />
-        <Post post={post} user="Sally Jones" />
-        <Post post={post} user="Barry Barrison" /> */}
       </section>
     </div>
   )
