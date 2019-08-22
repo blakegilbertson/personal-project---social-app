@@ -1,8 +1,6 @@
 import React from 'react';
 import Post from '../../components/posts/Post'
 
-
-
 const HomepageRoute = (props) => {
   const { postData } = props
 

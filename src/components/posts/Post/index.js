@@ -5,6 +5,7 @@ import DatePosted from '../DatePosted'
 import Comment from '../Comment'
 
 const Post = (props) => {
+  console.log('Post props: ', props)
   const {
     i,
     post,
