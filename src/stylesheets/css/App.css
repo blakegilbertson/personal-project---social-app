@@ -4,78 +4,78 @@
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-.social-app .site-header h1 {
-  text-align: center;
-}
-.social-app .site-header .primary-nav {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  justify-content: space-evenly;
-  align-self: center;
-  list-style: none;
-  padding-left: 0;
-  width: 100%;
-}
-.social-app a {
-  color: #FFF;
-}
-.social-app .post {
-  border: 1px solid #FFF;
-  padding: 10px;
-  margin: 20px;
-}
-.social-app .post .post-details {
-  border-bottom: 1px solid #f5f5f5;
-  font-size: 10px;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-}
-.social-app .post .post-details .posted-on {
-  float: right;
-}
-.social-app .post .post-content .post-img {
-  width: 100%;
-}
-.social-app .post .post-content h2 {
-  font-size: 14px;
-  margin: 0;
-}
-.social-app .post .post-content .post-body {
-  margin: 10px 0;
-}
-.social-app .post .post-interactions {
-  align-items: flex-start;
-  display: flex;
-  font-size: 10px;
-  margin-bottom: 15px;
-}
-.social-app .post .post-interactions .num-likes {
-  margin-right: 15px;
-}
-.social-app .post .post-btns button {
-  margin-right: 10px;
-}
-.social-app .post .write-comment textarea {
-  width: 98%;
-}
-.social-app .post .post-comments {
-  margin-top: 10px;
-}
-.social-app .post .post-comments .comment {
-  font-size: 10px;
-  margin: 10px;
-}
-.social-app .post .post-comments .comment .users-name {
-  margin-right: 10px;
-}
-.social-app .post .post-comments .comment .posted-on {
-  margin-left: 10px;
-}
-.social-app .post .post-comments .comment .comment-likes {
-  float: right;
-}
-
-/*# sourceMappingURL=App.css.map */
+  color: white; }
+  .social-app .site-header h1 {
+    text-align: center; }
+  .social-app .site-header .primary-nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    align-self: center;
+    list-style: none;
+    padding-left: 0;
+    width: 100%; }
+  .social-app a {
+    color: #FFF; }
+  .social-app .page-content {
+    margin: 20px; }
+  .social-app .post {
+    border: 1px solid #FFF;
+    padding: 10px;
+    margin-bottom: 20px; }
+    .social-app .post .post-details {
+      border-bottom: 1px solid #f5f5f5;
+      font-size: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px; }
+      .social-app .post .post-details .posted-on {
+        float: right; }
+    .social-app .post .post-content .post-img {
+      width: 100%; }
+    .social-app .post .post-content h2 {
+      font-size: 14px;
+      margin: 0; }
+    .social-app .post .post-content .post-body {
+      margin: 10px 0; }
+    .social-app .post .post-interactions {
+      align-items: flex-start;
+      display: flex;
+      font-size: 10px;
+      margin-bottom: 15px; }
+      .social-app .post .post-interactions .num-likes {
+        margin-right: 15px; }
+    .social-app .post .post-btns button {
+      color: #fff;
+      margin-right: 10px; }
+    .social-app .post .write-comment textarea {
+      width: 98%; }
+    .social-app .post .post-comments {
+      margin-top: 10px; }
+      .social-app .post .post-comments .comment {
+        font-size: 10px;
+        margin: 10px; }
+        .social-app .post .post-comments .comment .users-name {
+          margin-right: 10px; }
+        .social-app .post .post-comments .comment .posted-on {
+          margin-left: 10px; }
+        .social-app .post .post-comments .comment .comment-likes {
+          float: right; }
+  .social-app .profile-route .profile-cover {
+    position: relative; }
+    .social-app .profile-route .profile-cover .profile-username {
+      background: #282c34;
+      top: 0px;
+      font-size: 14px;
+      right: 0px;
+      margin: 0;
+      padding: 5px;
+      position: absolute; }
+    .social-app .profile-route .profile-cover .profile-cover-img {
+      max-height: 200px;
+      margin-left: -20px;
+      width: calc(100% + 40px); }
+    .social-app .profile-route .profile-cover .profile-image {
+      bottom: 10px;
+      left: -10px;
+      position: absolute; }

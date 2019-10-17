@@ -10,23 +10,27 @@
     h1 {text-align: center;}
 
     .primary-nav {
-      display: flex;
-      flex-direction: row;
-      flex-grow: 1;
-      justify-content: space-evenly;
-      align-self: center;
-      list-style: none;
-      padding-left: 0;
-      width: 100%;
+      &-list {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-evenly;
+        align-self: center;
+        list-style: none;
+        padding-left: 0;
+        width: 100%;
+      }
     }
   }
 
   a {color: #FFF;}
 
+  .page-content {margin: 20px;}
+
   .post {
     border: 1px solid #FFF;
     padding: 10px;
-    margin: 20px;
+    margin-bottom: 20px;
 
     .post-details {
       border-bottom: 1px solid #f5f5f5;
@@ -64,7 +68,10 @@
     }
 
     .post-btns {
-      button {margin-right: 10px}
+      button {
+        color: #fff;
+        margin-right: 10px;
+      }
     }
 
     .write-comment {
@@ -83,6 +90,31 @@
         .posted-on {margin-left: 10px}
 
         .comment-likes {float: right;}
+      }
+    }
+  }
+
+  .profile-route {
+    .profile-cover {
+      position: relative;
+      .profile-username {
+        background: #282c34;
+        top: 0px;
+        font-size: 14px;
+        right: 0px;
+        margin: 0;
+        padding: 5px;
+        position: absolute;
+      }
+      .profile-cover-img {
+        max-height: 200px;
+        margin-left: -20px;
+        width: calc(100% + 40px);
+      }
+      .profile-image {
+        bottom: 10px;
+        left: -10px;
+        position: absolute;
       }
     }
   }

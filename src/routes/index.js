@@ -9,7 +9,7 @@ const Router = (props) => {
   const { userData, postData } = props
   const userId = '666'
 
-  // TODO update state to a single user ratehr than hacking like this
+  // TODO update state to a single user rather than hacking like this
   let specificUserData = null;
   userData &&
     userData.map((user, index) => {
@@ -41,7 +41,14 @@ const Router = (props) => {
         )} />
         <Route exact={true} path='/profile' render={() => (
           userData &&
-          <ProfileRoutes userData={specificUserData} />
+          <ProfileRoutes
+            userData={specificUserData}
+            postData={postData}
+            handleLikeClick={props.handleLikeClick}
+            handleOpenCommentClick={props.handleOpenCommentClick}
+            handleAddCommentClick={props.handleAddCommentClick}
+            handleSeeCommentsClick={props.handleSeeCommentsClick}
+          />
         )} />
       </div>
     </BrowserRouter>

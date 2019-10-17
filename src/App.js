@@ -98,6 +98,7 @@ class App extends React.Component {
 
     console.log(comments)
 
+    // used to mock adding a comment - TODO: remove and use real data
     const newData = {
       postId: 867,
       user: 'Joanne',
