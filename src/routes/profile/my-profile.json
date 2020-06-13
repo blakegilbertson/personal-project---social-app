@@ -6,7 +6,7 @@
   "email": "arnold.berry@example.com",
   "gender": "male",
   "id": {
-    "value": "666"
+    "value": "667"
   },
   "login": {
     "md5": "39c1fad283a0159fbda3b2d252e49b3f",
@@ -32,7 +32,7 @@
   "profile": {
     "about": "Some description about this user",
     "interests": ["Football", "Golf", "Gaming"],
-    "role": "Manager"
+    "roles": ["Sales Manager", "Salesman"]
   },
   "registered": {
     "age": 13,

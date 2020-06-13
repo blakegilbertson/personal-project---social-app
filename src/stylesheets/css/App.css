@@ -1,11 +1,10 @@
 .social-app {
-  background: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  color: white; }
+  font-size: 12px; }
   .social-app .site-header h1 {
+    font-size: 30px;
     text-align: center; }
   .social-app .site-header .primary-nav-list {
     display: flex;
@@ -16,17 +15,17 @@
     list-style: none;
     padding-left: 0;
     width: 100%; }
-  .social-app a {
-    color: #FFF; }
+  .social-app button {
+    font-size: 16px; }
   .social-app .page-content {
     margin: 20px; }
   .social-app .post {
-    border: 1px solid #FFF;
+    border: 1px solid;
     padding: 10px;
     margin-bottom: 20px; }
     .social-app .post .post-details {
-      border-bottom: 1px solid #f5f5f5;
-      font-size: 10px;
+      border-bottom: 1px solid;
+      font-size: 12px;
       margin-bottom: 10px;
       padding-bottom: 10px; }
       .social-app .post .post-details .posted-on {
@@ -41,19 +40,33 @@
     .social-app .post .post-interactions {
       align-items: flex-start;
       display: flex;
-      font-size: 10px;
+      font-size: 12px;
       margin-bottom: 15px; }
       .social-app .post .post-interactions .num-likes {
         margin-right: 15px; }
-    .social-app .post .post-btns button {
-      color: #fff;
-      margin-right: 10px; }
+    .social-app .post .post-btns {
+      border-top: 1px solid;
+      padding: 10px 0; }
+      .social-app .post .post-btns button {
+        background: none;
+        font-size: 10px;
+        padding: 10px;
+        width: calc(50% - 5px); }
+      .social-app .post .post-btns button:first-child {
+        margin-right: 10px; }
     .social-app .post .write-comment textarea {
-      width: 98%; }
+      border: 1px solid;
+      font-size: 12px;
+      height: 100px;
+      padding: 5px;
+      width: calc(100% - 12px);
+      max-width: calc(100% - 12px); }
+    .social-app .post .write-comment .post-comment {
+      margin-top: 5px; }
     .social-app .post .post-comments {
       margin-top: 10px; }
       .social-app .post .post-comments .comment {
-        font-size: 10px;
+        font-size: 12px;
         margin: 10px; }
         .social-app .post .post-comments .comment .users-name {
           margin-right: 10px; }
@@ -61,10 +74,28 @@
           margin-left: 10px; }
         .social-app .post .post-comments .comment .comment-likes {
           float: right; }
+        .social-app .post .post-comments .comment .comment-body {
+          margin-top: 5px; }
+  .social-app .profile-route .profile-nav {
+    margin: 0px 0  20px -20px;
+    width: calc(100% + 40px); }
+    .social-app .profile-route .profile-nav ul {
+      display: flex;
+      margin: 0;
+      padding-left: 0; }
+    .social-app .profile-route .profile-nav li {
+      flex-grow: 1;
+      list-style: none; }
+      .social-app .profile-route .profile-nav li button {
+        border: none;
+        border-right: 1px solid;
+        outline: none;
+        padding: 5px;
+        width: 100%; }
   .social-app .profile-route .profile-cover {
+    max-height: 200px;
     position: relative; }
     .social-app .profile-route .profile-cover .profile-username {
-      background: #282c34;
       top: 0px;
       font-size: 14px;
       right: 0px;
@@ -79,3 +110,61 @@
       bottom: 10px;
       left: -10px;
       position: absolute; }
+
+.theme-light {
+  background: #FFF;
+  color: #282c34; }
+  .theme-light a {
+    color: #282c34; }
+  .theme-light button {
+    background: #FFF;
+    border-color: #282c34;
+    color: #282c34; }
+  .theme-light .post {
+    border-color: #f5f5f5; }
+    .theme-light .post .post-details {
+      border-bottom-color: #f5f5f5; }
+    .theme-light .post .post-btns {
+      border-color: #f5f5f5; }
+      .theme-light .post .post-btns button {
+        color: #282c34; }
+    .theme-light .post .write-comment textarea {
+      border-color: #282c34; }
+  .theme-light .profile-route .profile-nav {
+    background: #FFF; }
+    .theme-light .profile-route .profile-nav li button {
+      background: #FFF;
+      border-color: #282c34; }
+    .theme-light .profile-route .profile-nav .profile-nav-link--active {
+      background: #FFF;
+      color: #282c34; }
+  .theme-light .profile-route .profile-cover .profile-username {
+    background: #FFF; }
+
+.theme-dark {
+  background: #282c34;
+  color: #FFF; }
+  .theme-dark a {
+    color: #FFF; }
+  .theme-dark button {
+    background: #282c34;
+    border-color: #FFF;
+    color: #FFF; }
+  .theme-dark .post {
+    border-color: #FFF; }
+    .theme-dark .post .post-details {
+      border-color: #f5f5f5; }
+    .theme-dark .post .post-btns {
+      border-color: #FFF; }
+      .theme-dark .post .post-btns button {
+        color: #FFF; }
+  .theme-dark .profile-route .profile-nav {
+    background: #FFF; }
+    .theme-dark .profile-route .profile-nav li button {
+      background: #FFF;
+      border-color: #282c34; }
+    .theme-dark .profile-route .profile-nav .profile-nav-link--active {
+      background: #282c34;
+      color: #FFF; }
+  .theme-dark .profile-route .profile-cover .profile-username {
+    background: #282c34; }

@@ -4,6 +4,9 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import HomepageRoutes from './homepage';
 import UserRoutes from './users';
 import ProfileRoutes from './profile';
+import ReduxRoute from './redux-test';
+import ReduxRoute2 from './redux-test-2';
+import ReduxFromScratchRoute from './redux-from-scratch'
 
 const Router = (props) => {
   const { userData, postData } = props
@@ -50,8 +53,17 @@ const Router = (props) => {
             handleSeeCommentsClick={props.handleSeeCommentsClick}
           />
         )} />
+        <Route exact={true} path='/redux-test' render={() => (
+          <ReduxRoute />
+        )} />
+        <Route exact={true} path='/redux-test-2' render={() => (
+          <ReduxRoute2 />
+        )} />
+        <Route exact={true} path='/redux-from-scratch' render={() => (
+          <ReduxFromScratchRoute />
+        )} />
       </div>
-    </BrowserRouter>
+    </BrowserRouter> 
   )
 }
 

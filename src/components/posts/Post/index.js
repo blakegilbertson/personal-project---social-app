@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../global/Heading'
+import Button from '../../global/Button'
 import UserName from '../../user/UserName'
 import DatePosted from '../DatePosted'
 import Comment from '../Comment'
@@ -64,11 +65,10 @@ const Post = (props) => {
       </div>
 
       <div className="post-btns">
-        <button onClick={handleLikeClick} id={i}>
-          {liked ? 'Liked' : 'Like'}
-        </button>
-        {/* TODO: make this clickable to comment */}
-        <button className="comment" onClick={handleOpenCommentClick} id={i}>Comment</button>
+        <Button id={i} className="post-like-btn" onClick={handleLikeClick} text={liked ? 'Liked' : 'Like'} />
+
+        { /* TODO: make this clickable to comment */ }
+        <Button className="post-comment-btn" onClick={handleOpenCommentClick} text="Comment" />
       </div>
 
       {

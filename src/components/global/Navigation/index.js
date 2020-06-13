@@ -13,6 +13,9 @@ const Navigation = () => {
         <li>
           <a href="/profile?id=666">My Profile</a>
         </li>
+        <li>
+          <a href="/redux-test">Redux</a>
+        </li>
       </ul>
     </nav>
   )

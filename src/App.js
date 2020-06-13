@@ -46,7 +46,7 @@ class App extends React.Component {
       })
       .then(data => this.setState({ userData: { allUser: data.results } }))
       .catch(error => this.setState({ error, isLoading: false }))
-    // TODO look at this catch error further 
+    // TODO: look at this catch error further 
   }
 
   handleLikeClick = (e) => {
@@ -55,9 +55,9 @@ class App extends React.Component {
     const thisPost = allPosts[id]
     const numLikes = thisPost.interactions.likes
     const alreadyLiked = thisPost.interactions.liked
-    const udatedLikes = alreadyLiked ? numLikes - 1 : numLikes + 1
+    const updatedLikes = alreadyLiked ? numLikes - 1 : numLikes + 1
 
-    allPosts[id].interactions.likes = udatedLikes
+    allPosts[id].interactions.likes = updatedLikes
     allPosts[id].interactions.liked = !alreadyLiked
 
     this.setState({
@@ -136,7 +136,7 @@ class App extends React.Component {
     const postData = this.state.postData
 
     return (
-      <div className="social-app">
+      <div className="social-app theme-light">
         <header className="site-header">
           <Header type="1" text="Social App" />
           <Navigation />
