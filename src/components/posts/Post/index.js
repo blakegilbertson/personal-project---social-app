@@ -6,7 +6,7 @@ import DatePosted from '../DatePosted'
 import Comment from '../Comment'
 
 const Post = (props) => {
-  console.log('Post props: ', props)
+  //console.log('Post props: ', props)
   const {
     i,
     post,
@@ -68,14 +68,14 @@ const Post = (props) => {
         <Button id={i} className="post-like-btn" onClick={handleLikeClick} text={liked ? 'Liked' : 'Like'} />
 
         { /* TODO: make this clickable to comment */ }
-        <Button className="post-comment-btn" onClick={handleOpenCommentClick} text="Comment" />
+        <Button id={i} className="post-open-comment-btn" onClick={handleOpenCommentClick} text={displayAddComment ? 'Cancel comment' : 'Comment'} />
       </div>
 
       {
         displayAddComment &&
         <div className="write-comment">
           <textarea type="text" />
-          <button className="post-comment" onClick={handleAddCommentClick} id={i}>Post</button>
+          <Button id={i} className="post-submit-comment-btn" onClick={handleAddCommentClick} text="Post" />
         </div>        
       }
 

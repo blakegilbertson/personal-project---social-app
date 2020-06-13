@@ -3,6 +3,7 @@ import React from 'react';
 // console.log('userData: ', userData);
 import myData from './my-profile.json'
 import Post from '../../components/posts/Post'
+import Button from '../../components/global/Button'
 
 const UserImage = (props) => {
   const { imgUrl, imgClass, imgAlt } = props
@@ -138,35 +139,16 @@ class ProfileRoute extends React.Component {
         <nav className="profile-nav">
           <ul>
             <li>
-              <button
-                onClick={this.handlePostsClick}
-                className={pageViewState.postsUser ? 'profile-nav-link--active' : 'profile-nav-link--inactive'}
-              >
-                Posts
-              </button>
-            </li>
-            <li><button
-                  onClick={this.handleAboutClick}
-                  className={pageViewState.aboutUser ? 'profile-nav-link--active' : 'profile-nav-link--inactive'}
-                >
-                  About
-                </button>
+              <Button className={pageViewState.postsUser ? 'profile-nav-link--active' : 'profile-nav-link--inactive'} onClick={this.handlePostsClick} text="Posts" />
             </li>
             <li>
-              <button
-                onClick={this.handleMsgClick}
-                className={pageViewState.msgUser ? 'profile-nav-link--active' : 'profile-nav-link--inactive'}
-              >
-                Msg
-              </button>
+              <Button className={pageViewState.aboutUser ? 'profile-nav-link--active' : 'profile-nav-link--inactive'} onClick={this.handleAboutClick} text="About" />
             </li>
             <li>
-              <button
-                onClick={this.handleAddClick}
-                className={pageViewState.addUser ? 'profile-nav-link--active' : 'profile-nav-link--inactive'}
-              >
-                Add
-              </button>
+              <Button className={pageViewState.msgUser ? 'profile-nav-link--active' : 'profile-nav-link--inactive'} onClick={this.handleMsgClick} text="Msg" />
+            </li>
+            <li>
+              <Button className={pageViewState.addUser ? 'profile-nav-link--active' : 'profile-nav-link--inactive'} onClick={this.handleAddClick} text="Add" />
             </li>
           </ul>
         </nav>
