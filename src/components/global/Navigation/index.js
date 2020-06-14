@@ -6,10 +6,10 @@ const Navigation = () => {
     <nav id="primary-nav">
       <ul className="primary-nav-list">
         <li>
-          <Link href='/' text="Home" />
+          <Link href='/' className="primary-nav-list-home" text="Home" />
         </li>
         <li>
-          <Link href='/users' text="List of users" />
+          <Link href='/users' className="primary-nav-list-users" text="List of users" />
         </li>
         <li>
           <Link href='/profile?id=666' text="My Profile" />

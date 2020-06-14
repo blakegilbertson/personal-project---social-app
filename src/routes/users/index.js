@@ -3,16 +3,19 @@ import Link from '../../components/global/Link'
 import ProfilePic from '../../components/user/ProfilePic'
 
 const User = props => {
-  console.log('User props: ', props);
+  //console.log('User props: ', props);
   const user = props.user
   
   return (
     <li>
-      <ProfilePic className="user-profile-pic" src={user.picture.thumbnail} alt="user"/>
+      <Link href="/profile?id=666" className="list-of-users-link">
+        <ProfilePic className="user-profile-pic" src={user.picture.thumbnail} alt="user"/> 
 
-      <span className="user-details">
-        <Link href={`/profile?id=${user.id.value}`} text={`${user.name.first} ${user.name.last}`} />, {user.dob.age}
-      </span>
+        <div className="user-details">
+          <span className="user-details-name">{user.name.first} {user.name.last}</span>
+          <span className="user-details">, {user.dob.age}</span>
+        </div>
+      </Link>
     </li>
   )
 }
@@ -42,7 +45,7 @@ const LoadingUsers = () => {
 const UserRoute = props => {
   const { userData } = props
 
-  console.log('UserRoute userData: ', userData);
+  //console.log('UserRoute userData: ', userData);
   return (
     <div className="user-route">
       <h2>SOME USER CONTENT</h2>

@@ -133,16 +133,20 @@ class App extends React.Component {
     }))
   }
 
+  // TODO: continue building, Non-functional
   handleCommentValue = (e) => {
     console.log('handleCommentValue()');
 
-    //this.state = {commentData: ''};
+    const { id } = e.target
 
+    console.log('id: ', id);
+    
     this.setState(prevState => ({
       commentData: [...prevState.commentData, 'Some date by Blake'] //'Some date by Blake'
     }))
   }
 
+  // TODO: continue building, Non-functional
   handleCommentPost = () => {
     console.log('handleCommentPost()');
 

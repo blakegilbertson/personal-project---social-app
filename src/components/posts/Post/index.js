@@ -7,7 +7,7 @@ import DatePosted from '../DatePosted'
 import Comment from '../Comment'
 
 const Post = props => {
-  console.log('Post props: ', props)
+  //console.log('Post props: ', props)
   const {
     i,
     post,
@@ -83,7 +83,7 @@ const Post = props => {
         <div className="num-comments">
           {
             numComments > 0 ?
-              <Link href='/' onClick={handleSeeCommentsClick} id={i} text={`${numComments} comments`} /> :
+              <Link onClick={handleSeeCommentsClick} id={i} text={`${numComments} comments`} /> :
               <span>{numComments} comments</span>
           }
         </div>
