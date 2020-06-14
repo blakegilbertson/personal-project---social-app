@@ -1,18 +1,21 @@
 import React from 'react'
 import Header from '../../global/Heading'
 import Button from '../../global/Button'
+import Link from '../../global/Link'
 import UserName from '../../user/UserName'
 import DatePosted from '../DatePosted'
 import Comment from '../Comment'
 
-const Post = (props) => {
-  //console.log('Post props: ', props)
+const Post = props => {
+  console.log('Post props: ', props)
   const {
     i,
     post,
     handleLikeClick,
     handleOpenCommentClick,
     handleAddCommentClick,
+    handleCommentValue,
+    handleCommentPost,
     handleSeeCommentsClick
   } = props
 
@@ -26,7 +29,6 @@ const Post = (props) => {
     interactions
   } = post
 
-
   const {
     likes,
     liked,
@@ -37,6 +39,29 @@ const Post = (props) => {
   const comments = commentsObj.content
   const displayComments = commentsObj.displayComments
   const displayAddComment = commentsObj.displayAddComment
+
+  //console.log('postId: ', postId);
+
+  // const handleCommentValue = () => {
+  //   console.log('handleCommentValue()');
+
+  //   this.setState({value: event.target.value});
+  // }
+
+  // const handleCommentChange = (e) => {
+  //   console.log('handleCommentChange(): ', e);
+
+  //   console.log('this.state: ', this.state);
+
+  //   // onBlur
+  //   // get postId
+  //   // get comment text
+  //   // setState and add new comment
+
+  //   // this.setState({
+  //   //   commentData: ''
+  //   // })    
+  // }
 
   return (
     <div className="post" data-postid={postId}>
@@ -58,7 +83,7 @@ const Post = (props) => {
         <div className="num-comments">
           {
             numComments > 0 ?
-              <a href="/" onClick={handleSeeCommentsClick} id={i}>{numComments} comments</a> :
+              <Link href='/' onClick={handleSeeCommentsClick} id={i} text={`${numComments} comments`} /> :
               <span>{numComments} comments</span>
           }
         </div>
@@ -67,15 +92,15 @@ const Post = (props) => {
       <div className="post-btns">
         <Button id={i} className="post-like-btn" onClick={handleLikeClick} text={liked ? 'Liked' : 'Like'} />
 
-        { /* TODO: make this clickable to comment */ }
         <Button id={i} className="post-open-comment-btn" onClick={handleOpenCommentClick} text={displayAddComment ? 'Cancel comment' : 'Comment'} />
       </div>
 
       {
         displayAddComment &&
         <div className="write-comment">
-          <textarea type="text" />
-          <Button id={i} className="post-submit-comment-btn" onClick={handleAddCommentClick} text="Post" />
+          <textarea id="write-comment-textarea" type="text" value={handleCommentValue} onBlur={handleCommentPost} />
+
+          <Button id={i} data-postId={postId} className="post-submit-comment-btn" onClick={handleAddCommentClick} text="Post" />
         </div>        
       }
 

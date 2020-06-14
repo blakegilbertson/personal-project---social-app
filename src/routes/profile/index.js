@@ -4,16 +4,8 @@ import React from 'react';
 import myData from './my-profile.json'
 import Post from '../../components/posts/Post'
 import Button from '../../components/global/Button'
+import ProfilePic from '../../components/user/ProfilePic'
 
-const UserImage = (props) => {
-  const { imgUrl, imgClass, imgAlt } = props
-
-  return (
-    <div className="profile-image">
-      <img src={imgUrl} className={imgClass} alt={imgAlt} />
-    </div>
-  )
-}
 
 const LoadingUsers = () => {
   return (
@@ -98,9 +90,9 @@ class ProfileRoute extends React.Component {
     const postDataState = state.postData
     const userData = state.userData
     
-    console.log('render() pageViewState: ', pageViewState);
-    console.log('render() postDataState: ', postDataState);
-    console.log('render() userData: ', userData);
+    //console.log('render() pageViewState: ', pageViewState);
+    //console.log('render() postDataState: ', postDataState);
+    //console.log('render() userData: ', userData);
 
     const {
       id: {
@@ -132,7 +124,7 @@ class ProfileRoute extends React.Component {
 
           {
             largeUserImg && 
-            <UserImage imgUrl={largeUserImg} imgClass={`${pageCSS}-avatar`} imgAlt={`${username}'s profile cover`} />
+            <ProfilePic type="large" imgSrc={largeUserImg} altTag={`${username}'s profile cover`} />
           }
         </div>
 

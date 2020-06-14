@@ -18,6 +18,7 @@ import './stylesheets/css/App.css';
   - break down css to components where possible
   - stop the randomisation of data - either use different data or grab on homepage load and then not each route render
   - move state to redux store
+  - add airBnb guide
 */
 
 
@@ -34,7 +35,8 @@ class App extends React.Component {
         allUser: null
       },
       error: null,
-      postData: postData
+      postData: postData,
+      commentData: null
     }
   }
 
@@ -96,7 +98,7 @@ class App extends React.Component {
     const allPosts = this.state.postData
     const comments = allPosts[id].interactions.comments.content
 
-    console.log(comments)
+    console.log('comments: ', comments)
 
     // used to mock adding a comment - TODO: remove and use real data
     const newData = {
@@ -131,6 +133,23 @@ class App extends React.Component {
     }))
   }
 
+  handleCommentValue = (e) => {
+    console.log('handleCommentValue()');
+
+    //this.state = {commentData: ''};
+
+    this.setState(prevState => ({
+      commentData: [...prevState.commentData, 'Some date by Blake'] //'Some date by Blake'
+    }))
+  }
+
+  handleCommentPost = () => {
+    console.log('handleCommentPost()');
+
+    console.log('this.state: ', this.state);
+  }
+
+
   render() {
     const userData = this.state.userData.allUser
     const postData = this.state.postData
@@ -148,6 +167,8 @@ class App extends React.Component {
           handleLikeClick={this.handleLikeClick}
           handleOpenCommentClick={this.handleOpenCommentClick}
           handleAddCommentClick={this.handleAddCommentClick}
+          handleCommentValue={this.handleCommentValue}
+          handleCommentPost={this.handleCommentPost}
           handleSeeCommentsClick={this.handleSeeCommentsClick}
         />
       </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = (props) => {
+const Header = props => {
   const { type, text } = props
   switch (type) {
     case '1': 

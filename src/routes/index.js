@@ -8,7 +8,7 @@ import ReduxRoute from './redux-test';
 import ReduxRoute2 from './redux-test-2';
 import ReduxFromScratchRoute from './redux-from-scratch'
 
-const Router = (props) => {
+const Router = props => {
   const { userData, postData } = props
   const userId = '666'
 

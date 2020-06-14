@@ -1,8 +1,9 @@
 import React from 'react'
+import Link from '../../global/Link'
 
-const UserName = (props) => {
+const UserName = props => {
   return (
-    <a href="/profile?" className="users-name">{props.name}</a>
+    <Link href='/profile?' text={props.name} />
   )
 }
 

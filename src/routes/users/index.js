@@ -1,26 +1,27 @@
 import React from 'react';
+import Link from '../../components/global/Link'
+import ProfilePic from '../../components/user/ProfilePic'
 
-const User = (props) => {
+const User = props => {
   console.log('User props: ', props);
   const user = props.user
   
   return (
     <li>
-      <span className="">
-        <img src={user.picture.thumbnail} alt="user" />
-      </span>
-      <span className="">
-        <a href={`/profile?id=${user.id.value}`}>{user.name.first} {user.name.last}</a>, {user.dob.age}
+      <ProfilePic className="user-profile-pic" src={user.picture.thumbnail} alt="user"/>
+
+      <span className="user-details">
+        <Link href={`/profile?id=${user.id.value}`} text={`${user.name.first} ${user.name.last}`} />, {user.dob.age}
       </span>
     </li>
   )
 }
 
-const ListOfUsers = (props) => {
+const ListOfUsers = props => {
   const { userData } = props
 
   return (
-    <ul id="users">
+    <ul id="list-of-users" className="list-of-users">
       {
         userData.map((user, index) => {
           // console.log('mapping users: ', user);
@@ -38,7 +39,7 @@ const LoadingUsers = () => {
   )
 }
 
-const UserRoute = (props) => {
+const UserRoute = props => {
   const { userData } = props
 
   console.log('UserRoute userData: ', userData);

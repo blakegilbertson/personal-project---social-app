@@ -2,7 +2,7 @@ import React from 'react'
 import UserName from '../../user/UserName'
 import DatePosted from '../DatePosted'
 
-const Comment = (props) => {
+const Comment = props => {
   console.log('Comment props: ', props)
   const { user, likes, comment, datePosted } = props.comment
   return (

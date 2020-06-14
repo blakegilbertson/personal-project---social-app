@@ -1,21 +1,23 @@
 import React from 'react'
+import Link from '../Link'
 
 const Navigation = () => {
   return (
     <nav id="primary-nav">
       <ul className="primary-nav-list">
         <li>
-          <a href="/">Home</a>
+          <Link href='/' text="Home" />
         </li>
         <li>
-          <a href="/users">List of users</a>
+          <Link href='/users' text="List of users" />
         </li>
         <li>
-          <a href="/profile?id=666">My Profile</a>
+          <Link href='/profile?id=666' text="My Profile" />
         </li>
-        <li>
+        {/* <li>
           <a href="/redux-test">Redux</a>
-        </li>
+          <Link href='/redux-test' text="Redux" />
+        </li> */}
       </ul>
     </nav>
   )

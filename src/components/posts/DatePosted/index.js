@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DatePosted = (props) => {
+const DatePosted = props => {
   return <span className="posted-on">{props.date}</span>
 }
 

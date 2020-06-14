@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = (props) => {
+const Button = props => {
     const {
         type = 'tertiary', // primary, secondary, tertiary
         id = null, 
