@@ -42,7 +42,7 @@ class App extends React.Component {
 
   componentWillMount() {
     console.log('componentWillMount() running')
-    fetch('https://randomuser.me/api/?results=5')
+    fetch('https://randomuser.me/api/?results=10')
       .then(response => {
         return response.json();
       })
@@ -140,7 +140,7 @@ class App extends React.Component {
     const { id } = e.target
 
     console.log('id: ', id);
-    
+
     this.setState(prevState => ({
       commentData: [...prevState.commentData, 'Some date by Blake'] //'Some date by Blake'
     }))
